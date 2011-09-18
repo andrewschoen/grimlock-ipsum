@@ -16,9 +16,8 @@ class GrimlockIpsumGenerator(object):
 
         self.grimlock_middle_phrases = [
             'hurr hurr',
-            'code code code coffee code',
+            'coffee code code coffee code',
             'code code beer code beer',
-            'you will die',
             'bozo',
             'beryllium baloney',
             'cesium salami',
@@ -47,7 +46,7 @@ class GrimlockIpsumGenerator(object):
             'or else!',
             'you will die!',
             'to kill!',
-            'me here to kill everyone',
+            'hooray!',
         ]
 
         self.grimlock_tweets = [
@@ -77,7 +76,7 @@ class GrimlockIpsumGenerator(object):
             'pellentesque placerat',
             'vivamus tempus',
             'dolor sit amet',
-            'Etiam blandit adipiscing',
+            'etiam blandit adipiscing',
             'adipiscing',
             'nunc aliquam leo',
             'semper elit',
@@ -86,7 +85,7 @@ class GrimlockIpsumGenerator(object):
             'rutrum ipsum',
             'luctus',
             'donec a vulputate',
-            'Aenean libero magna',
+            'aenean libero magna',
             'ante ut metus',
             'mauris at iaculis',
             'cras id bibendum nibh',
