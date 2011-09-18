@@ -3,4 +3,4 @@
 local_settings.py
 pip-log.txt
 grimlockipsum.db
-confs/*
+grimlock_ipsum/confs/*
