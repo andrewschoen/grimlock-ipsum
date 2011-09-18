@@ -17,7 +17,7 @@ class GrimlockIpsumView(TemplateView):
         context = super(GrimlockIpsumView, self).get_context_data(**kwargs)
         request = self.request
         paragraphs = request.GET.get("paragraphs", 3)
-        case = request.GET.get("type", "loud")
+        case = request.GET.get("type", "quiet")
         grimlock_case = True if "loud" in case.lower() else False
         generator = GrimlockIpsumGenerator()
         grimlock_ipsum = generator.generate(num_paragraphs=int(paragraphs), 
