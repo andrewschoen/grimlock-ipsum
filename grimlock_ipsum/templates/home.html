@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h2>GET GRIMLOCK IPSUM. OR ELSE.</h2>
+<p>ME KINDA LIKE CHUCK NORRIS BUT NOT GET OLD AND SMELLY.  ALSO ME NOT HAVE WEIRD FACIAL HAIR.</p>
+<form action="/words/" method="GET">
+	<ul id="DO_IT">
+		{{ form.as_ul }}
+		<li><input type="submit" id="PRESS" value="PRESS BUTTON, STUPID" /></li>
+	</ul>
+</form>
+{% endblock %}
