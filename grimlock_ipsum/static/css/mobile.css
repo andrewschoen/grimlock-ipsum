@@ -1,0 +1,35 @@
+@import url('reset.css');
+/* @import url('960.css'); */
+@import url('text.css');
+
+/**********Custom Mobile Styles**********/
+body {background-color:#eee; font-family:helvetica,arial,sans-serif;}
+#GRIMLOCK {background-color:#fff;
+    position:relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.81);
+    -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.81); width:80%; margin:30px auto;padding:0px 15px;}
+header {margin:0px 10px;padding:30px 0px;border-bottom:1px solid #eee;}
+header small {color:#999;font-style:italic;font-family:georgia;}
+h1,h2,h3,h4,h5,h6 {font-family:georgia;}
+h1 {margin:0px 0px 5px 0px;}
+h2 {margin:0px 0px 20px 0px;font-size:1.2em;}
+h3 {font-size:1.1em;}
+p {}
+a {text-decoration:none;color:inherit;}
+#ME {margin:0 0 20px 0;}
+#ME img {border-bottom:1px solid #eee;width:100%;}
+
+
+#DO_IT li {list-style-type:none;margin:0 0 10px 0px;border-top:1px solid #eee; padding:15px 0 5px 0;}
+#DO_IT li .BEER {display:block;width:150px; text-align:right;float:left;margin-right:20px;}
+#DO_IT li ul {margin-bottom:0px;}
+#DO_IT li ul li {border:none;margin-bottom:5px;}
+#DO_IT li #PRESS {margin-left:20px;}
+
+#FEET {border-top:1px solid #eee;margin:50px 0px 0 0px;color:#999;padding:30px 0;}
+#FEET a {text-decoration:underline;color:#999;}
+#FEET a:hover {text-decoration:none;color:#333;}
+#FEET li {list-style-type:none;margin:0 0px 20px 0;}
+#FEET p {clear:both;margin:0 0 20px 0;}
+

@@ -4,7 +4,7 @@
 
 /**********Custom Styles**********/
 body {background-color:#eee; font-family:helvetica,arial,sans-serif;}
-#GRIMLOCK {margin-top:30px; background-color:#fff;
+#GRIMLOCK {margin-top:30px; margin-bottom:30px; background-color:#fff;
     position:relative;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.81);
     -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.81);
@@ -65,4 +65,12 @@ button {
 	text-decoration: none !important;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 	cursor:pointer;
+}
+#twitter_update_list {
+    margin-left:10px;
+    list-style:none;
+}
+#twitter_update_list li {
+    padding:10px 0 0 0;
+    margin:0;
 }
