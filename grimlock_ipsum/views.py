@@ -27,4 +27,3 @@ class GrimlockIpsumView(TemplateView):
             "grimlock_ipsum":grimlock_ipsum,
         })
         return context
-    
