@@ -1,6 +1,8 @@
 import random
 import twitter
 
+from django.core.cache import cache
+
 class GrimlockIpsumGenerator(object):
     def __init__(self, num_paragraphs=3, grimlock_case=False, 
             include_tweets=True, grimlock_tweet_caps=True, me_grimlock=False, 
@@ -170,14 +172,16 @@ class GrimlockIpsumGenerator(object):
         return "".join(paragraphs)
         
     def load_tweets(self):
-        api = twitter.Api()
-        try:
-            tweets = api.GetUserTimeline("Grok", include_rts=True, count=50)
-            print len(tweets)
-        except twitter.TwitterError:
-            # fail whale probably
-            return self.default_grimlock_tweets
-        return [tweet.text[17:] for tweet in tweets] + self.default_grimlock_tweets
+        if not cache.has_key("tweets"):
+            api = twitter.Api()
+            try:
+                tweets = api.GetUserTimeline("Grok", include_rts=True, count=50)
+            except twitter.TwitterError:
+                # fail whale probably
+                return self.default_grimlock_tweets
+            result = [tweet.text[17:] for tweet in tweets] + self.default_grimlock_tweets
+            cache.set("tweets", result, 3600)
+        return cache.get("tweets")
             
         
         
