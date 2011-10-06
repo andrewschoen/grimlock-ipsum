@@ -20,8 +20,10 @@ class GrimlockIpsumView(TemplateView):
         case = request.GET.get("type", "quiet")
         grimlock_case = True if "loud" in case.lower() else False
         me_grimlock = request.GET.get("me_grimlock", False)
+        include_tweets = request.GET.get("tweets", False)
         generator = GrimlockIpsumGenerator(num_paragraphs=int(paragraphs),
-                            grimlock_case=grimlock_case, me_grimlock=me_grimlock)
+                            grimlock_case=grimlock_case, me_grimlock=me_grimlock,
+                            include_tweets=include_tweets)
         grimlock_ipsum = generator.generate()
         context.update({
             "grimlock_ipsum":grimlock_ipsum,

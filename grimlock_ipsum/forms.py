@@ -12,5 +12,8 @@ class GrimlockIpsumForm(forms.Form):
                             choices=PARAGRAPH_CHOICES, initial=3)
     type = forms.ChoiceField(label="TYPE?", choices=CASE_CHOICES,
                             initial="quiet", widget=forms.RadioSelect)
-    me_grimlock = forms.BooleanField(label="", help_text="Start with ME, GRIMLOCK, ...")
+    tweets = forms.BooleanField(label="", help_text="Include tweets",
+                        initial=True)
+    me_grimlock = forms.BooleanField(label="", help_text="Start with ME, GRIMLOCK, ...", 
+                        initial=True)
     

@@ -1,4 +1,5 @@
 import random
+import twitter
 
 class GrimlockIpsumGenerator(object):
     def __init__(self, num_paragraphs=3, grimlock_case=False, 
@@ -60,7 +61,7 @@ class GrimlockIpsumGenerator(object):
             'hooray!',
         ]
 
-        self.grimlock_tweets = [
+        self.default_grimlock_tweets = [
             'WHAT IS BEST IN LIFE? CRUSH THE CODE, DRIVE THE USERS BEFORE YOU, HEAR THE LAMENTATION OF THE ACCOUNTING DEPARTMENT.',
             'THE ENEMY OF MY ENEMY IS THE ONE I PUNCH SECOND.',
             'LOOK LIKE SOMEONE NEED PUNCH IN FACE. THAT SOMEONE IS EVERYONE.',
@@ -79,6 +80,7 @@ class GrimlockIpsumGenerator(object):
             'TIME TO CLOSE OFFICE FOR NIGHT. WITH FIRE.',
             'ME ONLY HAVE ONE ADVICE: BE AWESOME. EVERYTHING ELSE DETAILS.',
         ]
+        self.grimlock_tweets = self.load_tweets()
 
         self.ipsum_phrases = [
             'lorem ipsum dolor',
@@ -166,5 +168,17 @@ class GrimlockIpsumGenerator(object):
         if self.grimlock_case:
             return "".join(paragraphs).upper()
         return "".join(paragraphs)
-    
+        
+    def load_tweets(self):
+        api = twitter.Api()
+        try:
+            tweets = api.GetUserTimeline("Grok", include_rts=True, count=50)
+            print len(tweets)
+        except twitter.TwitterError:
+            # fail whale probably
+            return self.default_grimlock_tweets
+        return [tweet.text[17:] for tweet in tweets] + self.default_grimlock_tweets
+            
+        
+        
     
