@@ -61,10 +61,10 @@
 				<h3>ME, GRIMLOCK, AM FAMOUS</h3>
 				<iframe width="290" height="226" src="http://www.youtube.com/embed/6R1m9fjdwjI"></iframe>
 				<div id="twitter">
-					<ul>
-						<li>THIS GRIMLOCK TWITTER FEED THIS WHAT GRIMLOCK SAY THIS GRIMLOCK TWITTER FEED<span>an hour ago</span></li>
-						<li>THIS GRIMLOCK TWITTER FEED THIS WHAT GRIMLOCK SAY THIS GRIMLOCK TWITTER FEED<span>an hour ago</span></li>					
-					</ul>				
+					<ul id="twitter_update_list">					
+					</ul>
+					<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+					<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/FAKEGRIMLOCK.json?callback=twitterCallback2&amp;count=3"></script>				
 				</div>
 				{% endblock %}
 				<div id="fb-root"></div>
@@ -96,7 +96,6 @@
 						<li><a href="http://www.zazzle.com/fakegrimlock/gifts" target="_blank"><img src="{{ STATIC_URL }}img/shirt1.jpg" alt="shirt for wear" style="margin-right:40px;" /></a></li>
 						<li><a href="http://www.zazzle.com/fakegrimlock/gifts" target="_blank"><img src="{{ STATIC_URL }}img/shirt2.jpg" alt="shirt for wear" /></a></li>
 					</ul>
-					
 				</div>
 				<div class="grid_3">
 					<h4>FAKEGRIMLOCK.COM</h4>
