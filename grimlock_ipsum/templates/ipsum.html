@@ -2,5 +2,32 @@
 
 {% block body %}
 	<h2>PASTE IN DESIGN. SEE? DESIGN BETTER!</h2>
+	<div id="ipsum">
 	{{ grimlock_ipsum|safe}}
+	<div>
+{% endblock %}
+
+{% block sidebar %}
+<h3>MORE GRIMLOCK IPSUM</h3>
+<form action="/words/" method="GET">
+	<ul id="DO_IT">
+		{{ form.as_p }}
+		<button type="submit" id="PRESS">PRESS BUTTON, STUPID</button>
+	</ul>
+</form>
+{% endblock %}
+
+{% block extrascript %}
+	<script type="text/javascript">
+		$(function() {
+			$("#ipsum").hover(
+				function() {
+					$("#ipsum span").addClass("tweet_highlight");
+				},
+				function() {
+					$("#ipsum span").removeClass("tweet_highlight");
+				}
+			);
+		});
+	</script>
 {% endblock %}

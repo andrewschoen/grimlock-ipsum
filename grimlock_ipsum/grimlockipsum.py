@@ -5,7 +5,7 @@ from django.core.cache import cache
 
 class GrimlockIpsumGenerator(object):
     def __init__(self, num_paragraphs=3, grimlock_case=False, 
-            include_tweets=True, grimlock_tweet_caps=True, me_grimlock=False, 
+            include_tweets=True, grimlock_tweet_caps=False, me_grimlock=False, 
             *args, **kwargs):
         super(GrimlockIpsumGenerator, self).__init__(*args, **kwargs)
         self.num_paragraphs = num_paragraphs
@@ -152,11 +152,12 @@ class GrimlockIpsumGenerator(object):
                 sentences.append(self.make_sentence())
             if self.include_tweets and "y" in random.choice("nnyn") and not has_tweet:
                 tweet = random.choice(self.grimlock_tweets)
+                self.grimlock_tweets.remove(tweet)
                 if not self.grimlock_tweet_caps:
                     # doesn't handle multiple sentences in the same string well
                     tweet = tweet.capitalize()
+                tweet = "<span>%s</span>" % tweet
                 sentences.append(tweet)
-                self.grimlock_tweets.remove(tweet)
                 has_tweet = True
         return " ".join(sentences)
         

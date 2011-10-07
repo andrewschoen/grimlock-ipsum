@@ -1,8 +1,8 @@
 from django import forms
 
 CASE_CHOICES = (
-    ('quiet', 'Quiet Grimlock'),
-    ('loud', 'FULL GRIMLOCK'),
+    ('quiet', 'Ipsum style'),
+    ('loud', 'GRIMLOCK STYLE'),
     
 )
 PARAGRAPH_CHOICES = [(x + 1, x + 1) for x in range(5)]

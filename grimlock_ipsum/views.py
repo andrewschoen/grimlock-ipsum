@@ -27,5 +27,6 @@ class GrimlockIpsumView(TemplateView):
         grimlock_ipsum = generator.generate()
         context.update({
             "grimlock_ipsum":grimlock_ipsum,
+            'form':GrimlockIpsumForm()
         })
         return context
