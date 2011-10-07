@@ -1,18 +1,30 @@
 {% extends "base.html" %}
 
 {% block body %}
-	<h2>PASTE IN DESIGN. SEE? DESIGN BETTER!</h2>
+	<h2 class="ipsum">PASTE IN DESIGN. MAKE DESIGN BETTER.</h2>
 	<div id="ipsum">
 	{{ grimlock_ipsum|safe}}
 	<div>
 {% endblock %}
 
 {% block sidebar %}
-<h3>MORE GRIMLOCK IPSUM</h3>
+<h3 class="ipsum">MORE AWESOME FAKEGRIMLOCK IPSUM</h3>
 <form action="/words/" method="GET">
-	<ul id="DO_IT">
-		{{ form.as_p }}
-		<button type="submit" id="PRESS">PRESS BUTTON, STUPID</button>
+	<ul id="form">
+		<li class="border"><label class="loud para" for="id_paragraphs">PARAGRAPH?</label> 
+		<select name="paragraphs" id="id_paragraphs">
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3" selected="selected">Three</option>
+			<option value="4">Four</option>
+			<option value="5">Five</option>
+		</select></li>
+		<li><label class="loud" for="id_type_0">TYPE?</label></li>
+		<li class="type"><label class="radio" for="id_type_0"><input checked="checked" type="radio" id="id_type_0" value="quiet" name="type" /> Ipsum style</label></li>
+		<li class="border"><label class="radio" for="id_type_1"><input type="radio" id="id_type_1" value="loud" name="type" /> GRIMLOCK STYLE</label></li>
+		<li class="border"><label for "id_type_2"><input type="checkbox" checked="checked" name="tweets">Include tweets</label></li>
+		<li class="border"><label for "id_type_2"><input type="checkbox" checked="checked" name="me_grimlock">Start with ME GRIMLOCK</label></li>
+		<li><button type="submit" id="press2">PRESS BUTTON, STUPID</button></li>
 	</ul>
 </form>
 {% endblock %}

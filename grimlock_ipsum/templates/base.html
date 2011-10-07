@@ -5,19 +5,19 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8" />
 	<!--[if IE]><![endif]-->
-	<title>GRIMLOCK IPSUM</title>
-	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title></title>
+	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<meta name="author" content="" />
 	<!-- !CSS -->
-	<link rel="stylesheet" media="all and (min-width:960px)" href="{{ STATIC_URL }}css/style.css">
-	<link rel="stylesheet" media="all and (max-width:959px)" href="{{ STATIC_URL }}css/mobile.css" />
+	<link rel="stylesheet" media="all and (min-width:960px)" href="{{ STATIC_URL }}css/style.css" />
+	<link rel="stylesheet" media="all and (max-width:959px)" href="{{ STATIC_URL }}css/mobile.css" /> 
 	
 	<!-- !Modernizr - All other JS at bottom -->
-	<script src="{{ STATIC_URL }}js/modernizr.js"></script>
+	<script src="js/modernizr.js"></script>
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -34,44 +34,85 @@
 </head>
 <!-- !Body -->
 <body>
-	<div id="GRIMLOCK" class="container_12">
-		<header>
-			<h1><a href="/">@FAKEGRIMLOCK IPSUM</a></h1>
-			<small>FOR ART HIPSTER PUT IN DESIGN. ME, GRIMLOCK, CODE DESIGN. DEVOUR HIPSTER.</small>
+	<div id="container">
+		<div id="top">
+			<header class="container_12">
+				<div  class="grid_7">
+					<h1><a href="/"><span>@FAKEGRIMLOCK IPSUM</span></a></h1>
+					<span id="tag">For art hipster put in design. Me, Grimlock, code design. Devour hipster.</span>
+				</div>
+			</header>
 			<div class="clear"></div>
-		</header><!-- /header -->
-		
-		<section id="GOODBACON">
-			<div id="ME"><img src="{{ STATIC_URL }}img/grimlock.jpg" alt="grimlock ipsum header"/></div>
-			<article class="grid_8">
+			<section id="quote">
+				<p>THE ENEMY OF MY ENEMY IS ONE I PUNCH SECOND.</p>
+				<a href="http://www.twitter.com/FAKEGRIMLOCK" target="_blank" class="follow"><img src="{{ STATIC_URL }}img/follow.png" alt="follow" /></a>
+			</section>
+		</div>
+	</div>
+	<div id="main">
+		<div id="content" class="container_12">
+			<section class="grid_7">
 				{% block body %}
 				
 				{% endblock %}
-			
-			</article>
-			<aside class="grid_4">
+			</section>
+			<aside class="grid_4 push_1">
 				{% block sidebar %}
 				<h3>ME, GRIMLOCK, AM FAMOUS</h3>
 				<iframe width="290" height="226" src="http://www.youtube.com/embed/6R1m9fjdwjI"></iframe>
+				<div id="twitter">
+					<ul>
+						<li>THIS GRIMLOCK TWITTER FEED THIS WHAT GRIMLOCK SAY THIS GRIMLOCK TWITTER FEED<span>an hour ago</span></li>
+						<li>THIS GRIMLOCK TWITTER FEED THIS WHAT GRIMLOCK SAY THIS GRIMLOCK TWITTER FEED<span>an hour ago</span></li>					
+					</ul>				
+				</div>
 				{% endblock %}
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) {return;}
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+
+				<div class="fb-like" data-href="http;//grimlockipsum.com" data-send="true" data-width="300" data-show-faces="false" data-font="arial"></div>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+				
 			</aside>
 			<div class="clear"></div>
-
-		</section><!-- /main -->
-		
-		<footer id="FEET">
-			
-			<ul>
-				<li><a href="http://twitter.com/FAKEGRIMLOCK" target="_blank">Follow @FAKEGRIMLOCK on the Twitter</a></li>
-				<li><a href="http://www.zazzle.com/fakegrimlock" target="_blank">BUY SHIRT FOR WEAR</a></li>
-				<li><a href="http://www.fakegrimlock.com" target="_blank">www.fakegrimlock.com</a></li>
-			</ul>
-			<p>ME LIKE <a href="http://hipsteripsum.me" target="_blank">HIPSTERIPSUM</a>. THEM TASTE GOOD. ME USE DESIGN BUT MAKE BETTER.</p>
-			<p>Site developed by GRIMLOCKNAUTS <a href="http://twitter.com/andrewschoen" target="_blank">@andrewschoen</a> and <a href="http://twitter.com/davidstanley01" target="_blank">@davidstanley01</a></p>
-		</footer><!-- /footer -->
+		</div>
+	</div>
+	<div id="footer">
+		<div id="footer-content" class="container_12">
+			<div style="margin-bottom:40px;">
+				<div class="grid_3">
+					<h4>FOLLOW <br /> @FAKEGRIMLOCK</h4>
+					<a href="http://www.twitter.com/FAKEGRIMLOCK" target="_blank"><img class="noborder" src="{{ STATIC_URL }}img/footer-avi.png" alt="fakegrimlock on the twitter" /></a>
+				</div>
+				<div class="grid_6">
+					<h4>BUY SHIRT FOR WEAR</h4>
+					<ul>
+						<li><a href="http://www.zazzle.com/fakegrimlock/gifts" target="_blank"><img src="{{ STATIC_URL }}img/shirt1.jpg" alt="shirt for wear" style="margin-right:40px;" /></a></li>
+						<li><a href="http://www.zazzle.com/fakegrimlock/gifts" target="_blank"><img src="{{ STATIC_URL }}img/shirt2.jpg" alt="shirt for wear" /></a></li>
+					</ul>
+					
+				</div>
+				<div class="grid_3">
+					<h4>FAKEGRIMLOCK.COM</h4>
+					<p id="hur">NO ONE <br />SHOULD LET ME <br />ON INTERNETS.<br /> HUR HUR</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="second">
+				<p>ME, REAL FAKEGRIMLOCK SAY ME NOT CODE OR DESIGN THIS. BUT IT GOOD, SO ME NO HAVE TO KILL ANYONE.</p>
+			</div>
+			<div id="bottom-footer">
+				<p>Site developed by GRIMLOCKNAUTS: <a href="http://www.twitter.com/andrewschoen" target="_blank">@andrewschoen</a> + <a href="http://www.twitter.com/davidstanley01" target="_blank">@davidstanley01</a>. Designed by <a href="http://www.twitter.com/mpaoletti" target="_blank">@mpaoletti</a>, might still eat him.</p>
+			</div>
+		</div>
 		<div class="clear"></div>
-	</div><!--!/#container -->
-	
+	</div>
 	<!-- !Javascript - at the bottom for fast page loading -->
 	<!-- Grab Google CDN's jQuery.  -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
